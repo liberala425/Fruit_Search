@@ -54,6 +54,8 @@ function useSuggestion(e) {
 	//const bar = document.getElementById("fruit");
 	//bar.placeholder = fruitWanted;
 	input.value = fruitWanted; //use .value, NOT .innerHTML
+	let suggestedList = document.querySelector(".suggestions ul");
+	suggestedList.innerHTML = "";
 }
 
 input.addEventListener('keyup', searchHandler);

@@ -1,6 +1,8 @@
 * {
   box-sizing: border-box;
-  background: orange;
+  background: linear-gradient(to right, yellow, orangered);
+  margin: 0;
+  padding: 0;
 }
 
 :focus {
@@ -19,11 +21,14 @@ input {
   display: flex;
   align-items: center;
   justify-content:center;
-  flex-direction:column; /* make sure the input and suggestions are in columns not rows. */
-  position: relative;
-  width: 100%;
+  flex-direction:column;  /*make sure the input and suggestions are in columns not rows. */
+  width: 300px;
+  margin: 500px auto 0;
+  /*padding: 10px 20px;
   height: 100vh;
-  color:#160053;
+  position: relative;
+  */
+  
 }
 .search-container input,
 .search-container .suggestions {
@@ -31,12 +36,14 @@ input {
 }
 .search-container input {
   display: flex;
+  
+  height: 50px;
   align-items: center;
   justify-content: space-between;
   position: relative;
   width: 300px;
-  padding: 0;
-  margin: 0;
+  border: 1px solid orangered; /* search box border line */
+  border-radius: 4px;
 }
 .search-container .suggestions {
   display: flex;
@@ -45,21 +52,25 @@ input {
   position: relative;
   width: 300px;
   max-height: 500px;
-  color: #fff;
   
+  overflow: auto;
 }
 
 ul {
   
+  border-top: 1px solid orangered;
+  /*
   position: absolute;
+  padding: 15px 10px;
   top: 120%;
   left: 0;
+  
   overflow: auto;
   max-height: 0;
   list-style: none;
-  color: #555;
+  color: #555;*/
   width: 300px;
-
+  border-radius: 4px;
 }
 ul.has-suggestions {
   max-height: 500px;
@@ -67,6 +78,9 @@ ul.has-suggestions {
 }
 ul li {
   background-color: orangered;
+  list-style: none;
+  border-radius: 4px;
+  padding: 15px 10px;
 }
 ul li:hover {
   color: #0a0a23;
